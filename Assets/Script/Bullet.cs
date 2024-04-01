@@ -40,7 +40,10 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // 적 지우기
-            Destroy(collision.gameObject);  
+            //Destroy(collision.gameObject);  
+
+            // DestroyEnemy 호출
+            collision.gameObject.GetComponent<Enemy>().DestroyEnemy();
             
             // 미사일 자신 지우기
             Destroy(gameObject);

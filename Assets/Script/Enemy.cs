@@ -33,11 +33,21 @@ public class Enemy   : MonoBehaviour
     // 화면 밖으로 나가면 카메라에서 안보이면
     private void OnBecameInvisible()
     {
+        Destroy(gameObject); // 객체 삭제        
+    }
+
+    public void DestroyEnemy()
+    {
         // 오디오 출력
-        //dieSource.PlayOneShot(dieClip);
+        dieSource.PlayOneShot(dieClip);
 
-        Destroy(gameObject); // 객체 삭제
+        // 이펙트 생성
+        GameObject effect = Instantiate(destroyEffectPrefab, transform.position, Quaternion.identity);
 
-        destroyEffectPrefab.SetActive(true);
+        // 이펙트 삭제
+        Destroy(effect, 0.3f);
+
+        // 객체 삭제
+        Destroy(gameObject);
     }
 }
