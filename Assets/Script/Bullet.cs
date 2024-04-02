@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float moveSpeed = 0.45f;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -39,12 +40,22 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // 적 지우기
-            //Destroy(collision.gameObject);  
+            // 폭발 이펙트
+            GameObject go = Instantiate(explosion, transform.position, Quaternion.identity);
+            Destroy(go, 0.3f);
 
-            // DestroyEnemy 호출
-            collision.gameObject.GetComponent<Enemy>().DestroyEnemy();
-            
+            // 적 지우기
+            Destroy(collision.gameObject);
+
+            // 사운드
+            SoundManager.instance.SoundDie();
+
+            // 점수
+            GameManager.Instance.AddScore(100);
+
+            /*// DestroyEnemy 호출
+            collision.gameObject.GetComponent<Enemy>().DestroyEnemy();*/
+
             // 미사일 자신 지우기
             Destroy(gameObject);
         }

@@ -7,18 +7,18 @@ public class Enemy   : MonoBehaviour
     // 움직일 속도를 지정해 줌
     public float moveSpeed = 1.3f;
 
-    // 적이 죽을때 효과음
+    /*// 적이 죽을때 효과음
     public AudioClip dieClip;
 
     private static AudioSource dieSource;
 
-    public GameObject destroyEffectPrefab;
+    public GameObject destroyEffectPrefab;*/
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject audioObj = new GameObject("dieAudioSource");
-        dieSource = audioObj.AddComponent<AudioSource>();
+        /*GameObject audioObj = new GameObject("dieAudioSource");
+        dieSource = audioObj.AddComponent<AudioSource>();*/
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class Enemy   : MonoBehaviour
         Destroy(gameObject); // 객체 삭제        
     }
 
-    public void DestroyEnemy()
+    /*public void DestroyEnemy()
     {
         // 오디오 출력
         dieSource.PlayOneShot(dieClip);
@@ -49,5 +49,5 @@ public class Enemy   : MonoBehaviour
 
         // 객체 삭제
         Destroy(gameObject);
-    }
+    }*/
 }
