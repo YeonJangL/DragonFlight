@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 80607494514251112}
   - component: {fileID: -7740947585827745366}
   - component: {fileID: 8623064423773817680}
-  - component: {fileID: 6828176302844472209}
+  - component: {fileID: 3465227444309779009}
   m_Layer: 0
   m_Name: Jewelry1
   m_TagString: Untagged
@@ -171,7 +171,7 @@ CircleCollider2D:
   m_Offset: {x: 0.0059013516, y: -0.0006557107}
   serializedVersion: 2
   m_Radius: 0.23699781
---- !u!114 &6828176302844472209
+--- !u!114 &3465227444309779009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,5 +183,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86f06dd7b0a2c34caf2690a67d978e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: -1.3
-  bounceForce: 3
+  moveSpeed: 3
+  itemType: 1

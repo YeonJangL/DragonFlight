@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // 움직일 속도를 지정해 줌
-    public float moveSpeed = 1.3f;
+    public float moveSpeed = 3f;
 
     /*// 적이 죽을때 효과음
     public AudioClip dieClip;

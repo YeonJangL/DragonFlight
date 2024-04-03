@@ -6,11 +6,11 @@ public class Bullet : MonoBehaviour
 {
     public float moveSpeed = 1.5f;
     public GameObject explosion;
+    private bool isItemSpawn = false; // 아이템이 생성되었는지 여부를 나타내는 변수
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -40,6 +40,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+
             // 폭발 이펙트
             GameObject go = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(go, 0.3f);
@@ -47,14 +48,21 @@ public class Bullet : MonoBehaviour
             // 아이템 생성 위치
             Vector3 itemSpawnPoint = collision.gameObject.transform.position;
 
-            // 적 지우기
-            Destroy(collision.gameObject);
+            // 적 색상 빨간색으로 변경
+            ChangeEnemyColor(collision.gameObject);
 
-            // 아이템 생성
-            SpawnItem spawnitem = collision.gameObject.GetComponent<SpawnItem>();
-            if (spawnitem != null)
-            {
-                spawnitem._SpawnItem(itemSpawnPoint);
+            // 적 지우기
+            Destroy(collision.gameObject, 0.5f);
+
+            if (!isItemSpawn)
+            { 
+                // 아이템 생성
+                SpawnItem spawnitem = collision.gameObject.GetComponent<SpawnItem>();
+                if (spawnitem != null)
+                {
+                    spawnitem._SpawnItem(itemSpawnPoint);
+                }
+                isItemSpawn = true;
             }
 
             // 사운드
@@ -73,4 +81,14 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void ChangeEnemyColor(GameObject enemy)
+    {
+        // 적 오브젝트에서 모든 SpriteRenderer 컴포넌트를 찾아서 색상 변경
+        SpriteRenderer[] renderers = enemy.GetComponentsInChildren<SpriteRenderer>();
+        foreach (SpriteRenderer renderer in renderers)
+        {
+            renderer.color = Color.red;
+        }
+    }
+
 }
