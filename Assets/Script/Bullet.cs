@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float moveSpeed = 0.45f;
+    public float moveSpeed = 1.5f;
     public GameObject explosion;
 
     // Start is called before the first frame update
@@ -44,14 +44,27 @@ public class Bullet : MonoBehaviour
             GameObject go = Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(go, 0.3f);
 
+            // 아이템 생성 위치
+            Vector3 itemSpawnPoint = collision.gameObject.transform.position;
+
             // 적 지우기
             Destroy(collision.gameObject);
+
+            // 아이템 생성
+            SpawnItem spawnitem = collision.gameObject.GetComponent<SpawnItem>();
+            if (spawnitem != null)
+            {
+                spawnitem._SpawnItem(itemSpawnPoint);
+            }
 
             // 사운드
             SoundManager.instance.SoundDie();
 
             // 점수
             GameManager.Instance.AddScore(100);
+
+            // 골드
+            GameManager.Instance.AddGold(1);
 
             /*// DestroyEnemy 호출
             collision.gameObject.GetComponent<Enemy>().DestroyEnemy();*/

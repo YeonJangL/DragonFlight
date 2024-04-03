@@ -18,7 +18,7 @@ public class Test2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1, 2);
+        InvokeRepeating("SpawnEnemy", 3, 3);
     }
 
     // Update is called once per frame

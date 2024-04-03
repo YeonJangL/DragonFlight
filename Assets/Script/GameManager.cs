@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public Text scoreText; // 점수를 표시하는 객체 에디터에서 받아옴
     public Text startText; // 카운트 텍스트 받아옴
+    public Text goldText;
 
     int score = 0; // 점수 관리
+    int gold = 0; // 골드 관리
 
     private void Awake()
     {
@@ -20,10 +22,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddGold(int num)
+    {
+        gold += num;
+        goldText.text = gold.ToString();
+    }
+
     public void AddScore(int num) // 점수 추가하는 함수
     {
         score += num;
-        scoreText.text = "Score : " + score; // 텍스트에 반영
+        scoreText.text = score.ToString(); // 텍스트에 반영
     }
 
     // Start is called before the first frame update

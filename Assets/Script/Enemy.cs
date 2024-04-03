@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy   : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     // 움직일 속도를 지정해 줌
     public float moveSpeed = 1.3f;
