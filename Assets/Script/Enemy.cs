@@ -44,7 +44,6 @@ public class Enemy : MonoBehaviour
         HP -= attack;
         ChangeEnemyColor();
 
-        Debug.Log("공격");
         if (HP <= 0)
         {
             // 점수

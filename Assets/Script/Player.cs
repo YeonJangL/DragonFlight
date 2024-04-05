@@ -61,5 +61,10 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        // 적이랑 충돌하면 생명 감소
+        if (collision.tag == "Enemy" || collision.tag == "Enemy1" || collision.tag == "Enemy2" || collision.tag == "Enemy3")
+        {
+            GameManager.Instance.Die(1);
+        }
     }
 }

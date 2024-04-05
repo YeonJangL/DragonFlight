@@ -12,7 +12,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnEnemy", 0.5f, 1f); // 일정 간격으로 SpawnEnemy 함수를 호출
+        InvokeRepeating("SpawnEnemy", 0.5f, 0.5f); // 일정 간격으로 SpawnEnemy 함수를 호출
     }
 
     void SpawnEnemy()

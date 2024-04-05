@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5233259416762961779}
   - component: {fileID: 3054040333402004092}
   - component: {fileID: 734535418749644385}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pattern2 (3)
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed29f7200dc8fd647b5264fc4eb19f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.3
+  moveSpeed: 3
   HP: 20
   list:
   - {fileID: 8890763554788950183, guid: d05da7a4530db8c4397903307984ac86, type: 3}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1032835894040189734}
   - component: {fileID: 3631790598770810605}
   - component: {fileID: 1661866219868857554}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pattern2
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed29f7200dc8fd647b5264fc4eb19f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.3
+  moveSpeed: 3
   HP: 20
   list:
   - {fileID: 8890763554788950183, guid: d05da7a4530db8c4397903307984ac86, type: 3}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 5631544574846954563}
   - component: {fileID: 2323481396865129833}
   - component: {fileID: 6370509913540394862}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pattern2 (2)
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed29f7200dc8fd647b5264fc4eb19f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.3
+  moveSpeed: 3
   HP: 20
   list:
   - {fileID: 8890763554788950183, guid: d05da7a4530db8c4397903307984ac86, type: 3}
@@ -426,7 +426,7 @@ GameObject:
   - component: {fileID: 2379764464561729218}
   - component: {fileID: 4967024311630553799}
   - component: {fileID: 1217870814495235875}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pattern2 (1)
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed29f7200dc8fd647b5264fc4eb19f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.3
+  moveSpeed: 3
   HP: 20
   list:
   - {fileID: 8890763554788950183, guid: d05da7a4530db8c4397903307984ac86, type: 3}
@@ -561,7 +561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4098702140682694361}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pattern2
   m_TagString: Enemy2
   m_Icon: {fileID: 0}
