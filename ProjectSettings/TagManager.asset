@@ -8,6 +8,13 @@ TagManager:
   - Effect
   - Item
   - Wall
+  - Gold
+  - J1
+  - J2
+  - J3
+  - Enemy1
+  - Enemy2
+  - Enemy3
   layers:
   - Default
   - TransparentFX
@@ -15,7 +22,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 

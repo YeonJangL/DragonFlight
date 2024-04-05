@@ -36,4 +36,30 @@ public class Player : MonoBehaviour
         // 새로운 위치로 이동
         transform.position = newPosition;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // 아이템이랑 충돌하면 골드 카운트
+        if (collision.tag == "Gold")
+        {
+            GameManager.Instance.AddGold(1);
+            Destroy(collision.gameObject);
+        }
+        if (collision.tag == "J1")
+        {
+            GameManager.Instance.AddGold(5);
+            Destroy(collision.gameObject);
+        }
+        if (collision.tag == "J2")
+        {
+            GameManager.Instance.AddGold(8);
+            Destroy(collision.gameObject);
+        }
+        if (collision.tag == "J3")
+        {
+            GameManager.Instance.AddGold(10);
+            Destroy(collision.gameObject);
+        }
+
+    }
 }

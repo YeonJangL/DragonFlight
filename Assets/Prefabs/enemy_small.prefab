@@ -134,3 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.3
+  HP: 100
+  Item: {fileID: 8890763554788950183, guid: d05da7a4530db8c4397903307984ac86, type: 3}
